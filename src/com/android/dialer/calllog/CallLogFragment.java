@@ -615,6 +615,7 @@ public class CallLogFragment extends ListFragment
             }
             CallLogNotificationsHelper.removeMissedCallNotifications();
             CallLogNotificationsHelper.updateVoicemailNotifications(getActivity());
+            CallLogNotificationsHelper.removeMissedVTCallNotifications(getActivity());
         }
     }
 }
