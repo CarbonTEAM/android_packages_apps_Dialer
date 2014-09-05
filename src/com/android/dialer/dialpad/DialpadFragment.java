@@ -112,7 +112,6 @@ public class DialpadFragment extends Fragment
         PopupMenu.OnMenuItemClickListener,
         DialpadKeyButton.OnPressedListener {
     private static final String TAG = DialpadFragment.class.getSimpleName();
-    private Context mContext;
 
     private Context mContext;
 
