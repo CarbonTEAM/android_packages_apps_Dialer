@@ -331,10 +331,6 @@ public class CallDetailHeader {
                         dataNumber, data.getNumberPresentation(), data.getFormattedNumber());
 
             Intent intent = CallUtil.getCallIntent(mNumber);
-            if (mSubscription != -1) {
-                intent.putExtra(MSimConstants.SUBSCRIPTION_KEY, mSubscription);
-                Log.d(TAG, "Start the activity and the call log sub is: " + mSubscription);
-            }
 
             ViewEntry entry = new ViewEntry(
                     mResources.getString(R.string.menu_callNumber,
@@ -535,10 +531,6 @@ public void loadContactPhotos(Uri photoUri, String displayName, String lookupKey
                 if (tm.getCallState() == TelephonyManager.CALL_STATE_IDLE) {
                     Intent intent = CallUtil.getCallIntent(
                             Uri.fromParts(CallUtil.SCHEME_TEL, mNumber, null));
-                    if (mSubscription != -1) {
-                        intent.putExtra(MSimConstants.SUBSCRIPTION_KEY, mSubscription);
-                        Log.d(TAG, "Start the activity and the call log sub is: " + mSubscription);
-                    }
                     mActivity.startActivity(intent);
                     return true;
                 }
